@@ -1,0 +1,21 @@
+user- thor loki12345	
+         ragnar loth12345
+         tomas shelby12345
+superuser- sarath	kumar
+			
+<div class="mb-3 mt-5"><input type="text" class="form-control" name="name" id="id_name" placeholder="product name"></div>
+                <div class="mb-3"><input type="text" class="form-control" name="description" id="id_description" placeholder="description"></div>
+                <div class="mb-3"><input type="text" class="form-control" name="condition" id="id_condition" placeholder="condition"></div>
+                <div class="mb-3"><input type="text" class="form-control" name="location" id="id_location" placeholder="location"></div>
+                <div class="mb-3"><input type="text" class="form-control" name="price" id="id_price" placeholder="price"></div>
+                <div class="mb-3"><input type="text" class="form-control" name="category" id="id_category" placeholder="category"></div>
+                <div class="mb-3">owner:<input class="form-control" name="owner" id="id_owner" value="{{request.user}}"></div>
+                <div class="mb-3">image :<input type="file" accept="media/"  name="image" id="id_image"></div>
+                <div class="mb-3">
+                    <select name="status" id="id_status" class="form-control">
+                    <option value="for-sale">for-sale</option>
+                    <option value="exchange">exchange</option>
+                    <option value="sold">sold</option>
+                    <option value="rent">rent</option>
+                  </select></div>
+		
