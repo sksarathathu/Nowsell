@@ -23,7 +23,8 @@ urlpatterns=[
     path("wishlistdelete/<int:id>",views.delete_wishlist,name="deletewish"),
     path("mobiles",views.MobileView.as_view(),name="mobiles"),
     path("cars",views.CarView.as_view(),name="cars"),
-    path("profileediting",views.edit_profile,name="edit_profile")
+    path("profileediting",views.edit_profile,name="edit_profile"),
+    path("chat",views.ChatView.as_view(),name="chat")
    
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

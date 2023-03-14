@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate,login,logout
 from customer.models import Products,Wishlist,Userprofile
 from django.views.decorators.cache import never_cache
 from django.utils.decorators import method_decorator
+from django.contrib.auth.models import User
 
 def signin_required(fn):
     def wrapper(request,*args,**kwargs):
@@ -151,6 +152,7 @@ class ProductView(CreateView):
     success_url=reverse_lazy("addedproduct")
 
 
+
 @method_decorator(decs,name="dispatch")
 class ProductDetailView(DetailView):
     template_name="productdetail.html"
@@ -195,7 +197,11 @@ class OrderView(TemplateView):
         qs=Products.objects.get(id=pid)
         return render(request,"checkout.html",{"product":qs})
 
+class ChatView(TemplateView):
+    template_name="chat.html"
+
 
 def SignOutView(request,*args,**kwargs):
     logout(request)
     return redirect('signin')
+
